@@ -1,4 +1,6 @@
-package com.collabeditor.Collab_Editor;
+package com.collabeditor.Collab_Editor.service;
+
+import com.collabeditor.Collab_Editor.model.Document;
 
 public interface DocumentService {
 

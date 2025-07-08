@@ -1,9 +1,11 @@
-package com.collabeditor.Collab_Editor;
+package com.collabeditor.Collab_Editor.service;
 
+import com.collabeditor.Collab_Editor.DocumentRepository;
+import com.collabeditor.Collab_Editor.model.Document;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DocumentServiceImpl implements  DocumentService{
+public class DocumentServiceImpl implements DocumentService {
 
     private DocumentRepository documentRepository;
 

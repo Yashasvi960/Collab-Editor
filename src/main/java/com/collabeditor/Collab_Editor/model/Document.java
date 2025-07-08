@@ -1,4 +1,4 @@
-package com.collabeditor.Collab_Editor;
+package com.collabeditor.Collab_Editor.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

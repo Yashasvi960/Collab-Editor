@@ -1,5 +1,7 @@
-package com.collabeditor.Collab_Editor;
+package com.collabeditor.Collab_Editor.controller;
 
+import com.collabeditor.Collab_Editor.service.DocumentService;
+import com.collabeditor.Collab_Editor.model.Document;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RequestMapping;
