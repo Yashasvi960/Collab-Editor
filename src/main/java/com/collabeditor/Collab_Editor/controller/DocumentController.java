@@ -1,5 +1,6 @@
 package com.collabeditor.Collab_Editor.controller;
 
+import com.collabeditor.Collab_Editor.model.EditOperation;
 import com.collabeditor.Collab_Editor.service.DocumentService;
 import com.collabeditor.Collab_Editor.model.Document;
 import org.springframework.http.ResponseEntity;
@@ -29,5 +30,11 @@ public class DocumentController {
         Document doc = documentService.loadDocument(id);
         if(doc==null) return ResponseEntity.notFound().build();
         return ResponseEntity.ok(doc.getContentJson());
+    }
+
+    @PostMapping("/{id}/edit")
+    public ResponseEntity<Document> applyEdit(@PathVariable String id, @RequestBody EditOperation operation) {
+        documentService.applyEdit(id, operation);
+        return ResponseEntity.ok(documentService.loadDocument(id));
     }
 }

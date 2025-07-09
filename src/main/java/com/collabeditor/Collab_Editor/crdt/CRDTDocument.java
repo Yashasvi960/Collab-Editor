@@ -1,19 +1,24 @@
 package com.collabeditor.Collab_Editor.crdt;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class CRDTDocument {
 
-    public static class CRDTCharacter{
+    public static class CRDTCharacter {
         public String id;
         public char value;
         public boolean visible = true;
+
+        public CRDTCharacter() {}
 
         public CRDTCharacter(String id, char value) {
             this.id = id;
             this.value = value;
         }
+    }
 
         public List<CRDTCharacter> characters = new ArrayList<>();
 
@@ -31,6 +36,7 @@ public class CRDTDocument {
             }
         }
 
+        @JsonIgnore
         public String getAllVisibleContent() {
            StringBuilder sb = new StringBuilder();
            for(CRDTCharacter character: characters) {
@@ -39,5 +45,4 @@ public class CRDTDocument {
 
            return sb.toString();
         }
-    }
 }

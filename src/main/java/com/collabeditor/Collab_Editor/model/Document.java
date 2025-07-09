@@ -2,6 +2,7 @@ package com.collabeditor.Collab_Editor.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 
 @Entity
 public class Document {
@@ -11,6 +12,7 @@ public class Document {
 
     private int version;
 
+    @Lob
     private String contentJson;
 
     public String getId() {
